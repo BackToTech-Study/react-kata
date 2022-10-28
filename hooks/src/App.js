@@ -7,6 +7,7 @@ import UseRefExample from "./components/userefexample";
 import UseEffectExample from "./components/useeffectexample";
 import UseContextExample from "./components/usecontextexample";
 import UseMemoExample from "./components/usememoexample";
+import UseCallbackExample from "./components/usecallbackexample";
 
 function App() {
   const [currentRendering, setCurrentRendering] = useState(() => {
@@ -55,6 +56,14 @@ function App() {
           }}
         >
           useMemo
+        </button>
+        <button
+          className="btn default"
+          onClick={() => {
+            setCurrentRendering(<UseCallbackExample />);
+          }}
+        >
+          useCallback
         </button>
       </SideBar>
       <Layout>{currentRendering}</Layout>
