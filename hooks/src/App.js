@@ -6,6 +6,7 @@ import UseStateExample from "./components/usestateexample";
 import UseRefExample from "./components/userefexample";
 import UseEffectExample from "./components/useeffectexample";
 import UseContextExample from "./components/usecontextexample";
+import UseMemoExample from "./components/usememoexample";
 
 function App() {
   const [currentRendering, setCurrentRendering] = useState(() => {
@@ -46,6 +47,14 @@ function App() {
           }}
         >
           useContext
+        </button>
+        <button
+          className="btn default"
+          onClick={() => {
+            setCurrentRendering(<UseMemoExample />);
+          }}
+        >
+          useMemo
         </button>
       </SideBar>
       <Layout>{currentRendering}</Layout>
